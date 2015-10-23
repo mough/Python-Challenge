@@ -1,5 +1,5 @@
 
-start = '/Users/mslavin/Downloads/channel/90052.txt'
+start = '../channel/90052.txt'  # edited out real filepath
 
 order = []
 
@@ -11,7 +11,7 @@ def get_next(start):
             if item.isdigit():
                 number = item
                 order.append(item)
-                start = '/Users/mslavin/Downloads/channel/%s.txt' % number
+                start = '../channel/%s.txt' % number
                 get_next(start)
             elif not any(ch.isdigit() for ch in text):
                 print("STOPPED", text)
@@ -21,7 +21,7 @@ def get_next(start):
 def collect_comments():
     import zipfile
     new = []
-    zf = zipfile.ZipFile('/Users/mslavin/Downloads/channel.zip', 'r')
+    zf = zipfile.ZipFile('../channel.zip', 'r')
     for item in order:
         file = '%s.txt' % item
         new.append(zf.getinfo(file).comment.decode("utf-8"))
