@@ -1,0 +1,46 @@
+<HTML>
+<HEAD><TITLE>My Html</TITLE>
+<!-- saved from url=(0030)http://www.sciencebuddies.org/ -->
+<!-- When this code is saved as a local file, the preceding line tells Internet Explorer to treat this file according to the security rules for the Internet zone (plus any security rules specific for the Science Buddies website). -->
+</HEAD>
+<body>
+<IMG ID="ball" STYLE="position: absolute; left: 200; top: 200; width: 10;" SRC="ball1.gif">
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+
+var myBall = document.getElementById("ball");
+var loc = 200;
+
+setInterval("myFunction()", 100);
+    
+var direction = 0;
+
+function myFunction()
+{
+   if (0 == direction)
+   { 
+       loc += 10;
+       
+       if (loc >= 50) 
+       {   
+        direction = 1;
+        }
+    }
+    else
+    { 
+        loc -= 10;
+        
+        if (loc < 50) 
+        {
+         direction = 0;
+        }
+    }
+    myBall.style.top = loc;
+}
+
+
+// -->
+</SCRIPT>
+My Page
+</BODY>
+</HTML>

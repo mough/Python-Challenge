@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Practice.iml" filepath="$PROJECT_DIR$/.idea/Practice.iml" />
+      <module fileurl="file://$USER_HOME$/tweepy/.idea/tweepy.iml" filepath="$USER_HOME$/tweepy/.idea/tweepy.iml" />
+      <module fileurl="file://$USER_HOME$/repos/coursematerial/projects/twitter_classifier/.idea/twitter_classifier.iml" filepath="$USER_HOME$/repos/coursematerial/projects/twitter_classifier/.idea/twitter_classifier.iml" />
+    </modules>
+  </component>
+</project>
