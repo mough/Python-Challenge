@@ -1,0 +1,42 @@
+def answer(n):
+    """
+    Find the minimum number of steps to reduce a given stringified positive integer n to 1 using the
+    following operations:
+    n + 1
+    n - 1
+    n / 2
+    >>> answer("4")
+    2
+    >>> answer("15")
+    5
+    >>> answer("1")
+    0
+    >>> answer("2")
+    1
+    >>> answer("-2")
+    Traceback (most recent call last):
+        ...
+    ValueError: Expected n to be a positive integer
+    """
+    new_int = int(n)
+    # input checking
+    if new_int < 0:
+        raise ValueError("Expected n to be a positive integer")
+
+    operation_count = 0
+    while new_int > 1:
+        operation_count += 1
+        if new_int % 2 == 0:
+            # keep new_int as an integer after division
+            new_int //= 2
+        # if new_int is 3 or least significant bits are 01
+        elif new_int == 3 or new_int % 4 == 1:
+            new_int -= 1
+        else:
+            new_int += 1
+    return operation_count
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
